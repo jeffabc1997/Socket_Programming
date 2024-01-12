@@ -13,3 +13,6 @@ The first step to do is parsing the input URL into hostname and path.
 Print all hyperlinks and the total number of hyperlinks in the given webpage. (not including hyperlinks that is in comment)
 Note that only the hyperlinks in the format of <a … href="abc" …></a> should be printed out and counted.
 Do not print/count other formats such as <link … href="abc" …>.
+
+# Demo
+![Screenshot](https://github.com/jeffabc1997/Socket_Programming/assets/55129114/9d5cf04d-1550-41b9-a80e-e2df14a26b66)
