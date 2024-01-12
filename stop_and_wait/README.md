@@ -20,3 +20,6 @@ The main objective is to have hands-on experience in implementing Automatic Repe
 - To simulate packet loss, the client intentionally disregards each received packet with a 30% probability (#define LOSS_RATE 0.3).
 - Upon successfully receiving a packet, the client should send an acknowledgment (ACK) and append the received data to the file if the associated sequence number is valid.
 - Save the file with the prefix "download_" and name it as "download_{filename}".
+
+# Demo 
+![Screenshot 2024-01-12 at 10 12 36 PM](https://github.com/jeffabc1997/Socket_Programming/assets/55129114/a4312b25-3598-4744-b684-0a7137a728c6)
