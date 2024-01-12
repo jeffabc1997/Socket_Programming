@@ -99,22 +99,6 @@ void separate_host_path(char webname[], char hostname[], char pathname[]) {
     if(path_start_idx < input_len) { // if '/' exists then copy path
         strncpy(&pathname[1], &webname[path_start_idx], (input_len - path_start_idx));
     }
-    
-    // int idx = 0, host_idx = 0, path_idx = 1;
-    // int path_status = 0; // 0 means copy to host, 1 means copy to path
-    // char c = webname[idx];
-    // while(c != '\0') {
-    //     if(path_status == 0) {
-    //         if(c == '/') { // www.com.tw/base.html
-    //             path_status = 1; // change to path
-    //         } else {
-    //             hostname[host_idx++] = c;
-    //         }
-    //     } else if(path_status == 1){
-    //         pathname[path_idx++] = c;
-    //     }
-    //     c = webname[++idx];
-    // }
 }
 
 /* ref: https://beej-zhtw.netdpi.net/05-system-call-or-bust/5-1-getaddrinfo-start */
@@ -154,7 +138,6 @@ void find_ip(char hostname[], char ipname[]) {
         // printf(" %s: %s\n", ipver, ipstr); // debug
         strncpy(ipname, ipstr, strlen(ipstr)); // store in output
     }
-
     
     freeaddrinfo(res); // 釋放鏈結串列
 }
@@ -201,10 +184,6 @@ int main() {
     
     // Consider using recv() in a loop for large data to ensure complete message reception
     while(recv_count > 0) {
-        // if(count == 0) {
-        //     printf("%.*s\n", recv_count, buffer); // check Html content, debug
-        // }
-        // printf("COUNT: %i %i =========\n", count++, recv_count); // debug
         
         lab2(buffer, recv_count);
         recv_count = recv(sockfd, buffer, BUFFER_SIZE, 0); // Idea: https://stackoverflow.com/questions/30470505/http-request-using-sockets-in-c
