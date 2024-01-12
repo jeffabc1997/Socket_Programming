@@ -2,11 +2,11 @@
 #include <time.h>
 
 struct Window {
-    int cur_seq;
-    int current;
+    // int cur_seq;
+    // int current;
     int send_base;
     int available;
-    int acked;
+    // int acked;
 } ;
 struct Window Cwnd;
 

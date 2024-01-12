@@ -147,7 +147,6 @@ void* ack_write_mem(void* param) {
             sendAck(seq);  
         } else if(Recv_base <= seq && seq <= Recv_base + WINDOW_SIZE - 1) { // [rcvbase, rcvbase+N‐1]
             sendAck(seq);
-            /* may need some critical section here */
             
             Recv_field[seq] = true;
             if(seq == Recv_base) {
@@ -161,7 +160,6 @@ void* ack_write_mem(void* param) {
             memcpy(&buffer[current], &packet.data, packet.header.size);
             printf("recv_base: %i, tid = %i\n", Recv_base, tid);
         } else {
-            // ignore
             // pthread_mutex_unlock(&m_base);
         }
         
