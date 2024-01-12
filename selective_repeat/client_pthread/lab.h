@@ -9,8 +9,7 @@
 #include <time.h>
 #include <unistd.h>
 #include <pthread.h>
-// pthread is needed if you want to implement the bonus part
-// also, you need change the Makefile to link pthread library
+
 // gcc server.c -o server -pthread
 
 #define TIMEOUT 100
